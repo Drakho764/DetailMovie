@@ -5,6 +5,8 @@ import 'package:proyecto/login_screen.dart';
 import 'package:proyecto/routes.dart';
 import 'package:proyecto/screens/calendar_screen.dart';
 import 'package:proyecto/screens/carrera_screen.dart';
+import 'package:proyecto/screens/fav_movie.dart';
+import 'package:proyecto/screens/popular_screen.dart';
 import 'package:proyecto/screens/profesor_screen.dart';
 import 'package:proyecto/services/local_storage.dart';
 import 'package:proyecto/services/notificacion_services.dart';
@@ -364,8 +366,21 @@ class _HomeState extends State<Home> {
             title: Text('Profesor'),
             onTap: () => Navigator.push(context, MaterialPageRoute(builder: ((context)=> const ProfesorScreen())))
           ),
-
-
+          ListTile(
+            leading: Icon(Icons.movie),
+            trailing: Icon(Icons.chevron_right),
+            title: Text('Movies'),
+            subtitle: Text('Acerca de...'),
+            onTap: () => Navigator.push(context, MaterialPageRoute(builder: ((context)=> const PopularScreen())))
+          
+          ),
+          ListTile(
+            leading: Icon(Icons.favorite),
+            trailing: Icon(Icons.chevron_right),
+            title: Text('Mis Pelis Favoritas'),
+            onTap: () => Navigator.push(context, MaterialPageRoute(builder: ((context)=> const FavMovie())))
+          
+          ),
 
 
 
